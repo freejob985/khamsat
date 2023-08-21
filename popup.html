@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>Copy Button Text</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="sw.js"></script>
+
+  <style>
+    body {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 50vh;
+    }
+    .btn-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .btn-group .btn {
+      padding: 10px 20px;
+      white-space: normal;
+      word-break: break-word;
+      height: auto;
+    }
+  </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const button1 = document.getElementById('button1');
+      button1.addEventListener('click', function() {
+        window.open('https://example.com', '_blank');
+      });
+
+      document.addEventListener('keydown', function(event) {
+        alert();
+        if (event.shiftKey && event.key === '9') {
+          window.open('https://example.com', '_blank');
+        }
+      });
+    });
+
+    function showSwalAlert() {
+      Swal.fire({
+        title: 'تم فتح التبويب!',
+        icon: 'success',
+        confirmButtonText: 'موافق'
+      });
+    }
+  </script>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <div class="btn-container">
+    <button id="button1" class="btn btn-primary">مع حضرتك مبرمج ويب بخبرة اكثر من 7 سنين في مجال برمجة الويب استطيع تنفيذ المطلوب بأحترافية وفي الوقت المطلوب</button>
+    <button id="button2" class="btn btn-secondary">السلام عليكم أستاذ
+أنا خبرة لأكثر من 5 سنوات في إدخال البيانات و برامج المايكروسوفت وتصميم العروض التقديمية الاحترافية، أعمل باحترافية ودقة وسرعة عالية تتجاوز 70 كلمة/ الدقيقة. فهمت طلبك وجاهزة للعمل معك فورا.
+يسعدني التعامل معك، في انتظار التواصل لمزيد من التفاصيل</button>
+    <button id="button3" class="btn btn-success">السلام عليكم أستاذ
+أنا خبرة لأكثر من 5 سنوات في إدخال البيانات و برامج المايكروسوفت وتصميم العروض التقديمية الاحترافية، أعمل باحترافية ودقة وسرعة عالية تتجاوز 70 كلمة/ الدقيقة. فهمت طلبك وجاهزة للعمل معك فورا.
+يسعدني التعامل معك، في انتظار التواصل لمزيد من التفاصيل</button>
+    <button id="button4" class="btn btn-danger">مع حضرتك المهندسة الهام خبرة في المجال اكثر من ثلاث سنين استطيع تنفيذ المطلوب باحترافيه بأنتظار التواصل ومعرفة باقي التفاصيل</button>
+    <button id="button5" class="btn btn-warning">مع حضرتك المهندسة الهام خبرة في المجال اكثر من ثلاث سنين استطيع تنفيذ المطلوب باحترافيه بأنتظار التواصل ومعرفة باقي التفاصيل
+
+</button>
+    <button id="button6" class="btn btn-info">مع حضرتك مبرمج ويب بخبرة اكثر من 7 سنين في مجال برمجة الويب استطيع تنفيذ المطلوب بأحترافية وفي الوقت المطلوب
+</button>
+    <button id="button7" class="btn btn-dark">Button 7</button>
+    <button id="button8" class="btn btn-light">Button 8</button>
+  </div>
+</body>
+</html>
